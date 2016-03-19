@@ -1,5 +1,6 @@
 package com.example.user.notificationsys;
 
+
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 String data="";
                 try {
                     data = URLEncoder.encode("email", "UTF-8")+"="+URLEncoder.encode(emailString,"UTF-8");
+                    data += "&" + URLEncoder.encode("pass", "UTF-8") + "=" + URLEncoder.encode(passString, "UTF-8");
                     data += "&" + URLEncoder.encode("pass", "UTF-8") + "=" + URLEncoder.encode(passString, "UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
